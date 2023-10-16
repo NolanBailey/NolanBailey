@@ -1,3 +1,3 @@
 # NolanBailey.github.io
-_ A website for my profile page _
-_ visit at nolanbailey.github.io _
+A website for my profile page. 
+# Visit at nolanbailey.github.io
