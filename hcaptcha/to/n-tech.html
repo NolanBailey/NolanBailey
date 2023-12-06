@@ -6,6 +6,7 @@
         <meta name="appleid-signin-scope" content="[SCOPES]">
         <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
         <meta name="appleid-signin-state" content="[STATE]">
+    <meta name="google-signin-client_id" content="1057119751351-e5q711v5dq6vsfd0m2bj7n6l67i8gmue.apps.googleusercontent.com">
 </head>
 <style>
     .signin-button {
@@ -23,19 +24,28 @@
       </form>
         <div id="appleid-signin" class="signin-button" data-color="black" data-border="true" data-type="sign-in"></div>
         <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
-        <div id="g_id_onload"
-         data-client_id="1057119751351-e5q711v5dq6vsfd0m2bj7n6l67i8gmue.apps.googleusercontent.com"
-         data-login_uri="https://nolanbailey.github.io/n.tech"
-         data-auto_prompt="false">
-      </div>
-      <div class="g_id_signin"
-         data-type="standard"
-         data-size="large"
-         data-theme="outline"
-         data-text="sign_in_with"
-         data-shape="rectangular"
-         data-callback="OnSuccess"
-         data-logo_alignment="left">
-      </div>
+        <div id="my-signin2"></div>
+        <script>
+          function onSuccess(googleUser) {
+            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+          }
+          function onFailure(error) {
+            console.log(error);
+          }
+          function renderButton() {
+            gapi.signin2.render('my-signin2', {
+              'scope': 'profile email',
+              'width': 240,
+              'height': 50,
+              'longtitle': true,
+              'theme': 'dark',
+              'onsuccess': onSuccess,
+              'onfailure': onFailure
+            });
+          }
+        </script>
+      
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    
     <a href="https://cutt.ly/swI68xVG"><button>Submit</button></a>
 </html>
