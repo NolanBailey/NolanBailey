@@ -1,7 +1,0 @@
---------------------------------------------------
-nolanbailey.github.io privacy policy V. 0.1
-==================================================
-We do not collect any information on you. The Google and Apple sign-ins are just gimmicks.
-When you use reCaptcha you are using Googles privacy policy and terms of use.
-When you use hCaptcha you are using hCaptchas privacy policy and terms of use.
-When you use Github you are using Github privacy policy and terms of use.
